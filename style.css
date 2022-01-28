@@ -1,0 +1,184 @@
+@import url(https://fonts.google.com/specimen/Kumbh+Sans);
+
+*,
+*::after,
+*::before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  font-size:18px;
+  font-family: 'Kumbh Sans',sans-serif;
+  min-height: 100vh;
+  background-color: hsl(185, 75%, 39%);
+}
+
+.parent{
+  display:flex;
+  flex-direction:column;
+  /* justify-content:center; */
+  position: relative;
+  background: url(./images/bg-pattern-top.svg) no-repeat, url(./images/bg-pattern-bottom.svg) no-repeat, hsl(185, 75%, 39%);
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  margin: 85px 0px;
+  width:400px;
+  height:450px;
+  border-radius: 15px 50px 30px;
+  z-index: 1;
+} 
+
+.contain-1{
+  width:400px;
+  height:150px;
+  border-top-left-radius: 15px;
+  border-top-right-radius:15px;
+  background-image: url(images/bg-pattern-card.svg);
+}
+
+.contain-2{
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+  align-items:center;
+  width:400px;
+  height:300px;
+  background-color:#fff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+}
+
+.user-img{
+ position:absolute;
+ top:90px;
+ z-index:5000;
+}
+
+.user-img img{
+  /* width:120px;
+  height:120px;
+  object-fit:cover;
+  object-position:65% 50%; */
+  border-radius:50%;
+  border:5px solid #fff;
+}
+
+.user-infos{
+  text-align:center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.user-infos>p{
+  margin-top: 15px;
+}
+
+.user-infos span{
+  color: hsl(0, 0%, 59%);
+  margin: 0px 7px;
+}
+
+.span-data{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:row;
+  margin-top:30px;
+  border-top: 1px solid hsl(0, 0%, 59%);
+  width: 100%;
+}
+
+h3{
+  margin-top: 25px;
+}
+
+span{
+  text-align:center;
+  font-weight:400;
+  margin:0px 34px;
+}
+
+p{
+  letter-spacing: 1px;
+  margin-top: 10px;
+  color: hsl(0, 0%, 59%);
+}
+
+pre{
+  font-weight:700;
+}
+
+
+.top-img {
+  transform: rotate(40deg) translate(-44px, 4px);
+  position: absolute;
+  width: 420px;
+  left: 0;
+}
+
+.bottom-img {
+  position: absolute;
+  width: 403px;
+  right: 0;
+  bottom: 0;
+}
+
+.attribution{
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width:450px) {
+  .parent{
+    width:325px;
+    height:400px;
+    z-index: 1;
+  } 
+
+  .contain-1{
+    width:auto;
+    height:150px;
+  }
+  
+  .contain-2{
+    width:auto;
+    height:300px;
+  }
+
+  span {
+    margin: 0px 25px;
+  }
+
+  p{
+    font-size: 15px;
+  }
+
+  .span-data{
+    margin-top: 0px;
+  }
+
+  .attribution{
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+
+@media screen  and (max-width:320px) {
+
+  
+  .parent {
+    width: 290px;   
+  }
+
+  .attribution{
+    margin-top: 15px;
+  }
+
+}
+/*box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
