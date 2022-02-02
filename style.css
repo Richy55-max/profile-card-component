@@ -13,19 +13,23 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content:center;
+  position: relative;
   font-size:18px;
   font-family: 'Kumbh Sans',sans-serif;
   min-height: 100vh;
+  width: 100%;
   background-color: hsl(185, 75%, 39%);
+  background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  gap: 1rem;
 }
 
 .parent{
   display:flex;
   flex-direction:column;
-  /* justify-content:center; */
   position: relative;
-  background: url(./images/bg-pattern-top.svg) no-repeat, url(./images/bg-pattern-bottom.svg) no-repeat, hsl(185, 75%, 39%);
-  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
   margin: 85px 0px;
   width:400px;
   height:450px;
@@ -48,19 +52,20 @@ body{
   align-items:center;
   width:400px;
   height:300px;
+  /* height:265px; */
   background-color:#fff;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19);
 }
 
-.user-img{
+.user-picture{
  position:absolute;
  top:90px;
  z-index:5000;
 }
 
-.user-img img{
+.user-picture img{
   /* width:120px;
   height:120px;
   object-fit:cover;
@@ -69,17 +74,18 @@ body{
   border:5px solid #fff;
 }
 
-.user-infos{
+.user-data{
   text-align:center;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  /* margin-top: 50px; */
+  /* margin-bottom: 20px; */
+  margin-bottom: 35px;
 }
 
-.user-infos>p{
+.user-data>p{
   margin-top: 15px;
 }
 
-.user-infos span{
+.user-data span{
   color: hsl(0, 0%, 59%);
   margin: 0px 7px;
 }
@@ -89,7 +95,7 @@ body{
   justify-content:center;
   align-items:center;
   flex-direction:row;
-  margin-top:30px;
+  /* margin-top:30px; */
   border-top: 1px solid hsl(0, 0%, 59%);
   width: 100%;
 }
@@ -101,7 +107,7 @@ h3{
 span{
   text-align:center;
   font-weight:400;
-  margin:0px 34px;
+  margin:10px 30px;
 }
 
 p{
@@ -131,6 +137,7 @@ pre{
 
 .attribution{
   margin-bottom: 40px;
+  font-size: 16px;
 }
 
 @media screen and (max-width:450px) {
@@ -182,3 +189,4 @@ pre{
 
 }
 /*box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
